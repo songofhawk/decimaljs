@@ -42,14 +42,14 @@ function Decimal(primitiveValue, digit, isInternalMode)
 	if (iPointPos>=0) {
 		iDigit+=sNumber.length-iPointPos-1;
 	}
+	
 	if (iDigit<0) {
-		iNumber=fNumber;
+		this.iNumber=fNumber;
 		iDigit=0;
 	} else {
 		sNumber=sNumber.replace(".","");
-		iNumber=parseInt(sNumber, 10);
+		this.iNumber=parseInt(sNumber, 10);
 	}
-	this.iNumber=iNumber;
 	this.iDigit=iDigit;
 }
 
